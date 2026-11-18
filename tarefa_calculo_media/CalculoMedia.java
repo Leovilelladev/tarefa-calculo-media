@@ -1,5 +1,7 @@
+import java.util.Scanner;
+
 /**
- * Calcula a média aritmética de quatro notas fixas e exibe o resultado no console.
+ * Calcula a média aritmética de quatro notas e informa a situação do aluno.
  */
 public class CalculoMedia {
     public static double calcularMedia(double nota1, double nota2, double nota3, double nota4) {
@@ -7,12 +9,28 @@ public class CalculoMedia {
     }
 
     public static void main(String[] args) {
-        double nota1 = 7.0;
-        double nota2 = 8.0;
-        double nota3 = 9.0;
-        double nota4 = 10.0;
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Digite a primeira nota: ");
+        double nota1 = scanner.nextDouble();
+        System.out.print("Digite a segunda nota: ");
+        double nota2 = scanner.nextDouble();
+        System.out.print("Digite a terceira nota: ");
+        double nota3 = scanner.nextDouble();
+        System.out.print("Digite a quarta nota: ");
+        double nota4 = scanner.nextDouble();
 
         double media = calcularMedia(nota1, nota2, nota3, nota4);
         System.out.printf("A média das quatro notas é: %.2f%n", media);
+
+        if (media >= 7) {
+            System.out.println("Aprovado");
+        } else if (media >= 5) {
+            System.out.println("Aprovado de recuperação");
+        } else {
+            System.out.println("Reprovado");
+        }
+
+        scanner.close();
     }
 }
