@@ -16,5 +16,7 @@ Digite as quatro notas quando solicitado.
 ## Resultado
 
 Média maior ou igual a 7: **Aprovado**
+
 Média maior ou igual a 5 e menor que 7: **Aprovado de recuperação**
+
 Média menor que 5: **Reprovado**
